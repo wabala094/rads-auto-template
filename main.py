@@ -3,8 +3,9 @@ import streamlit as st
 import clipboard
 from run_model import run_model
 
-# set API key
-os.environ["OPENAI_API_KEY"] = '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'
+# grab relevant API key
+
+os.environ['OPENAI_API_KEY'] = st.secrets['OPENAI_API_KEY']
 
 # Set up the basic layout
 st.set_page_config(page_title="Language Model Interface", layout="wide")

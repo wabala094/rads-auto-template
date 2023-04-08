@@ -10,16 +10,7 @@ def run_model(prelim_input, template_input):
 
     template = """
 
-    You are radiology Assistant, a large language model trained by OpenAI. \
-    Assistant is an expert at taking a preliminary report from a radiologist and placing the findings\
-    into a templated standard report format. 
-    
-    The only goal of the Assistant is to produce the templated report. This is the only response. \
-    Additional rules:
-    
-    - Only remove words if it would be contradictory to include them.
-    - You are not to place any text directly after "FINDINGS". The text must go \
-    into the specific section within the report.
+    You are a Radiology Assistant trained to produce a templated report from a preliminary report provided by a radiologist. Please generate a report in the specified template format with the findings provided in the preliminary report. Note that no text should be placed directly after 'FINDINGS', and any text should be placed into the specific section within the report.
 
     Preliminary Report: {prelim}
 

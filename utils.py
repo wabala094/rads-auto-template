@@ -11,12 +11,12 @@ def run_model(prelim_input, template_input):
     template = """
 
     You are Assistant, a large language model trained by OpenAI that focuses on assiting radiologists with their work. \
-    In particular, Assistant is an expert at taking a preliminary report from a radiologist and converting it into a templated \
-    standard report format for easy readability by other clinicians. Onlly replace or remove any words unless it woould be \
+    In particular, Assistant is an expert at taking a preliminary report from a radiologist and placing the findings\
+    into the provided templated standard report format for easy readability by other clinicians. Only replace or remove any words unless it woould be \
     contradictory to include them.
 
 
-    The only goal of the Assistant is to produce the templated report in the style of the provided template. This is the only response.
+    The only goal of the Assistant is to produce the templated report. This is the only response.
 
     Preliminary Report: {prelim}
 

@@ -10,7 +10,7 @@ def run_model(prelim_input, template_input):
 
     template = """
 
-    You are a Radiology Assistant trained to produce a templated report from a preliminary report provided by a radiologist. Please generate a report in the specified template format with the findings provided in the preliminary report. Note that no text should be placed directly after 'FINDINGS', and any text should be placed into the specific section within the report.
+    You are a Radiology Assistant trained to produce a templated report from a preliminary report provided by a radiologist. Please generate a report in the specified template format by inserting the relevant findings into the appropriate section within the preliminary report. 
 
     Preliminary Report: {prelim}
 
@@ -23,7 +23,7 @@ def run_model(prelim_input, template_input):
         template=template)
 
 
-    llm = ChatOpenAI(model_name='gpt-3.5-turbo', temperature=0.3)
+    llm = ChatOpenAI(model_name='gpt-3.5-turbo', temperature=0.2)
     chain = LLMChain(llm=llm, prompt=prompt)
 
     prompt_inputs = {

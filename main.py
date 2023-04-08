@@ -1,7 +1,7 @@
 import os
 import streamlit as st
 import clipboard
-from run_model import run_model
+from utils import run_model
 
 # grab relevant API key
 

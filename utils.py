@@ -23,7 +23,7 @@ def run_model(prelim_input, template_input):
         template=template)
 
 
-    llm = ChatOpenAI(model_name='gpt-3.5-turbo', temperature=0)
+    llm = ChatOpenAI(model_name='gpt-3.5-turbo', temperature=0.3)
     chain = LLMChain(llm=llm, prompt=prompt)
 
     prompt_inputs = {
